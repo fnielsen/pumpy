@@ -13,6 +13,16 @@ class Matrix():
         log.info("Constructing matrix object")
         self._matrix = object
 
+    @property
+    def shape(self):
+        rows = len(self._matrix)
+        if rows == 0: 
+            rows = 1
+            columns = 0
+        else:
+            columns = len(self._matrix[0])
+        return (rows, columns)
+
     def transpose(self):
         log.warning("Transposing")
         return zip(*self._matrix)
