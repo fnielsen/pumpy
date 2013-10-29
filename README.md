@@ -1,4 +1,4 @@
 pumpy
 =====
 
-Numpy in Python
+Numpy in Python - toy example
