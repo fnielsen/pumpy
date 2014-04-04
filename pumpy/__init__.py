@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-
-"""
-pumpy
-
-"""
+"""pumpy - pure python numerics."""
 
 __title__ = "pumpy"
 __version__ = 0.1
@@ -13,4 +9,4 @@ __copyright__ = "DTU"
 
 from core import *
 
-__all__ = ['Matrix']
+__all__ = ('Matrix')
