@@ -1,3 +1,4 @@
+"""Matrix."""
 
 import logging
 from logging import NullHandler
@@ -9,9 +10,11 @@ log.addHandler(NullHandler())
 
 
 class Matrix(object):
+
     """Numerical matrix."""
 
     def __init__(self, obj):
+        """Initialize matrix object."""
         log.debug("Constructing matrix object")
         self._matrix = obj
 
