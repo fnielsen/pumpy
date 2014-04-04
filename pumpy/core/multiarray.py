@@ -29,7 +29,7 @@ class Matrix(object):
 
         """
         return self._matrix[indices[0]][indices[1]]
-            
+
     def __setitem__(self, indices, value):
         """Set element in matrix.
 
@@ -39,7 +39,7 @@ class Matrix(object):
         >>> m[0, 1]
         2
         >>> m[0, 1] = 5
-        >>> m[0, 1] 
+        >>> m[0, 1]
         5
 
         """
@@ -49,7 +49,7 @@ class Matrix(object):
     def shape(self):
         """Return shape of matrix."""
         rows = len(self._matrix)
-        if rows == 0: 
+        if rows == 0:
             rows = 1
             columns = 0
         else:
