@@ -1,5 +1,5 @@
 """Pumpy core data structure."""
 
-from multiarray import *
+from multiarray import Matrix
 
-__all__ = ('Matrix')
+__all__ = ('Matrix',)
