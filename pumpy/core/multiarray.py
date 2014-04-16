@@ -21,8 +21,8 @@ class Matrix(object):
     def __getitem__(self, indices):
         """Get element in matrix.
 
-        Example
-        -------
+        Examples
+        --------
         >>> m = Matrix([[1, 2], [3, 4]])
         >>> m[0, 1]
         2
@@ -33,8 +33,8 @@ class Matrix(object):
     def __setitem__(self, indices, value):
         """Set element in matrix.
 
-        Example
-        -------
+        Examples
+        --------
         >>> m = Matrix([[1, 2], [3, 4]])
         >>> m[0, 1]
         2
@@ -55,6 +55,41 @@ class Matrix(object):
         else:
             columns = len(self._matrix[0])
         return (rows, columns)
+
+    def __add__(self, other):
+        """Add number to matrix.
+
+        Parameters
+        ----------
+        other : integer or Matrix
+
+        Returns
+        -------
+        m : Matrix
+            Matrix of the same size as the original matrix
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4]])
+        >>> m = m + 1
+        >>> m[0, 0]
+        2
+
+        >>> m = m + Matrix([[5, 6], [7, 8]])
+        >>> m[0, 0]
+        7
+
+        """
+        if isinstance(other, int) or isinstance(other, float):
+            result = [[element + other for element in row]
+                      for row in self._matrix]
+        elif isinstance(other, Matrix):
+            result = [[self[m, n] + other[m, n]
+                       for n in range(self.shape[1])]
+                      for m in range(self.shape[0])]
+        else:
+            raise TypeError
+        return Matrix(result)
 
     def transpose(self):
         """Return transposed matrix."""
