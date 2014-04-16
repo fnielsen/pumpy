@@ -7,6 +7,6 @@ __author__ = "Finn Aarup Nielsen"
 __license__ = "GPLv3"
 __copyright__ = "DTU"
 
-from core import *
+from core import Matrix
 
-__all__ = ('Matrix')
+__all__ = ('Matrix',)
