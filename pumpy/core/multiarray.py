@@ -56,6 +56,21 @@ class Matrix(object):
             columns = len(self._matrix[0])
         return (rows, columns)
 
+    def __abs__(self):
+        """Return the absolute value.
+
+        Examples
+        --------
+        >>> m = Matrix([[1, -1]])
+        >>> m_abs = abs(m)
+        >>> m_abs[0, 1]
+        1
+
+        """
+        result = Matrix([[abs(element) for element in row]
+                         for row in self._matrix])
+        return result
+
     def __add__(self, other):
         """Add number to matrix.
 
