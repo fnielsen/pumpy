@@ -121,7 +121,7 @@ class Matrix(object):
         Examples
         --------
         >>> m = Matrix([[1, 2], [3, 4]])
-        >>> m = 2
+        >>> m = m * 2
         >>> m[0, 0]
         2
 
@@ -133,12 +133,40 @@ class Matrix(object):
             raise TypeError
         return Matrix(result)
 
+    def __str__(self):
+        """Return string representation of matrix."""
+        return str(self._matrix)
+
     def transpose(self):
-        """Return transposed matrix."""
+        """Return transposed matrix.
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4]])
+        >>> m = m.transpose()
+        >>> m[0, 1]
+        3
+
+        """
         log.debug("Transposing")
         return Matrix(zip(*self._matrix))
 
     @property
     def T(self):
-        """Transposed of matrix."""
+        """Transposed of matrix.
+
+        Returns
+        -------
+        m : Matrix
+            Copy of matrix
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4]])
+        >>> m = m.T
+        >>> m[0, 1]
+        3
+
+        """
+        log.debug("Calling transpose()")
         return self.transpose()
