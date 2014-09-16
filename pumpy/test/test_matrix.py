@@ -1,6 +1,6 @@
 
 
-from ..multiarray import Matrix
+from ..matrix import Matrix
 
 
 def test_getitem():
