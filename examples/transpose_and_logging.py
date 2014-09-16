@@ -1,15 +1,16 @@
 """Transpose and logging example."""
 
-import logging
+from logging import getLogger, StreamHandler, Formatter, DEBUG
 import pumpy
 
 A = pumpy.Matrix([[1, 2], [3, 4]])
 A.T
 
-log = logging.getLogger()
-log.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()  
-handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s'))
+log = getLogger()
+log.setLevel(DEBUG)
+handler = StreamHandler()
+formatter = Formatter('%(asctime)s %(levelname)s %(name)s: %(message)s')
+handler.setFormatter(formatter)
 log.addHandler(handler)
 
 A = pumpy.Matrix([[1, 2], [3, 4]])
