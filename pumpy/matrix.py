@@ -133,6 +133,33 @@ class Matrix(object):
             raise TypeError
         return Matrix(result)
 
+    def __pow__(self, other):
+        """Power of element with `other` as the exponent.
+
+        Parameters
+        ----------
+        other : integer, float
+
+        Returns
+        -------
+        m : Matrix
+            Matrix with multiplication result
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4]])
+        >>> m = m ** 3
+        >>> m[0, 1]
+        8
+
+        """
+        if isinstance(other, int) or isinstance(other, float):
+            result = [[element ** other for element in row]
+                      for row in self._matrix]
+        else:
+            raise TypeError
+        return Matrix(result)
+
     def __str__(self):
         """Return string representation of matrix."""
         return str(self._matrix)
