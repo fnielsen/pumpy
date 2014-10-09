@@ -134,7 +134,7 @@ class Matrix(object):
         return Matrix(result)
 
     def __pow__(self, other):
-        """Power of element with `other` as the exponent.
+        """Compute power of element with `other` as the exponent.
 
         Parameters
         ----------
@@ -176,7 +176,7 @@ class Matrix(object):
 
         """
         log.debug("Transposing")
-        return Matrix(zip(*self._matrix))
+        return Matrix(list(zip(*self._matrix)))
 
     @property
     def T(self):
