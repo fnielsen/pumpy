@@ -47,7 +47,15 @@ class Matrix(object):
 
     @property
     def shape(self):
-        """Return shape of matrix."""
+        """Return shape of matrix.
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4], [5, 6]])
+        >>> m.shape
+        (3, 2)
+
+        """
         rows = len(self._matrix)
         if rows == 0:
             rows = 1
