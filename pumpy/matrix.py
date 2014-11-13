@@ -149,7 +149,8 @@ class Matrix(object):
 
         """
         log.debug("Transposing")
-        return Matrix(zip(*self._matrix))
+        # list necessary for Python 3 where zip is a generator
+        return Matrix(list(zip(*self._matrix)))
 
     @property
     def T(self):
