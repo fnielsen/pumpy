@@ -14,10 +14,10 @@ setup(
     license="GPL",
     keywords="example documentation tutorial",
     url="http://packages.python.org/an_example_pypi_project",
-    packages=['pumpy', 'pumpy.core', 'pumpy.core.test', 'examples'],
-    long_description=read('README.md'),
+    packages=['pumpy', 'pumpy.test', 'examples'],
+    long_description=read('README.rst'),
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
     ],
 )
