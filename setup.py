@@ -3,9 +3,10 @@ from setuptools import setup
 from codecs import open
 
 
-with open('README.md', 'r', 'utf-8') as f:
-    readme = f.read()
-
+def read(filename):
+    with open(filename, 'r', 'utf-8') as f:
+        readme = f.read()
+    return readme
 
 setup(
     name="pumpy",
