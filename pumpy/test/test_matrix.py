@@ -5,6 +5,7 @@ from .. import Matrix
 
 
 def test_abs():
+    """Test absolute function on matrix."""
     matrix = Matrix([[-2, 3]])
     abs_matrix = abs(matrix)
     assert abs_matrix[0, 0] == 2
@@ -19,6 +20,7 @@ def test_getitem():
 
 
 def test_setitem():
+    """Test [] operator for matrix."""
     matrix = Matrix([[1, 2]])
     matrix[0, 1] = 3
     assert matrix[0, 1] == 3
@@ -26,6 +28,7 @@ def test_setitem():
 
 
 def test_shape():
+    """Test shape property for matrix."""
     matrix = Matrix([[1, 2], [3, 4], [5, 6]])
     assert matrix.shape == (3, 2)
 
