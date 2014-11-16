@@ -47,7 +47,15 @@ class Matrix(object):
 
     @property
     def shape(self):
-        """Return shape of matrix."""
+        """Return shape of matrix.
+
+        Examples
+        --------
+        >>> m = Matrix([[1, 2], [3, 4], [5, 6]])
+        >>> m.shape
+        (3, 2)
+
+        """
         rows = len(self._matrix)
         if rows == 0:
             rows = 1
@@ -176,6 +184,7 @@ class Matrix(object):
 
         """
         log.debug("Transposing")
+        # list necessary for Python 3 where zip is a generator
         return Matrix(list(zip(*self._matrix)))
 
     @property

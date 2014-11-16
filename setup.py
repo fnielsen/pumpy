@@ -17,9 +17,9 @@ setup(
     keywords="matrix numerical",
     url="https://github.com/fnielsen/pumpy",
     packages=['pumpy', 'pumpy.test', 'examples'],
-    long_description=readme,
+    long_description=read('README.rst'),
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
     ],
 )
